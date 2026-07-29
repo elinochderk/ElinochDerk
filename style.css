@@ -1,0 +1,509 @@
+/* ==========================================================
+   Elin & Derk – Bröllopshemsida
+   ========================================================== */
+
+/* ---------- Färgpalett ---------- */
+
+:root {
+    --background: #faf7f2;
+    --white: #ffffff;
+
+    --text: #3f3f3f;
+    --muted: #6b6b6b;
+
+    --pink: #e9a8ba;
+    --green: #afc8a4;
+    --blue: #afcbe8;
+    --yellow: #f4d98b;
+
+    --shadow: 0 20px 60px rgba(0,0,0,.08);
+
+    --radius: 28px;
+
+    --section-spacing: 9rem;
+--transition: .35s ease;
+--border: rgba(0,0,0,.06);
+}
+
+/* ---------- Grundinställningar ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:
+
+    radial-gradient(circle at top left,
+    rgba(233,168,186,.12),
+    transparent 35%),
+    
+    radial-gradient(circle at bottom right,
+    rgba(175,203,232,.15),
+    transparent 30%),
+    
+    var(--background);
+    color: var(--text);
+
+    font-family: "Inter", sans-serif;
+    line-height: 1.7;
+}
+
+/* ---------- Gemensam container ---------- */
+
+.container {
+    width: min(1180px, 92%);
+    margin: auto;
+}
+
+/* ==========================================================
+   Header
+   ========================================================== */
+
+   .site-header {
+
+    position: sticky;
+    top: 0;
+
+    background: rgba(250,247,242,.88);
+
+    backdrop-filter: blur(14px);
+
+    z-index: 1000;
+
+    border-bottom: 1px solid rgba(0,0,0,.05);
+
+}
+
+.site-header .container {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 0;
+
+}
+
+.logo{
+
+    font-family:"Cormorant Garamond",serif;
+    font-size:2rem;
+
+}
+
+.logo span{
+
+    color:var(--pink);
+
+}
+
+nav{ 
+
+    display:flex;
+    align-items:center;
+    gap:2rem;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    font-size:.95rem;
+
+    transition:.25s;
+
+}
+
+nav a:hover{
+
+    color:var(--pink);
+
+}
+
+.nav-button{
+
+    background:var(--pink);
+
+    color:white;
+
+    padding:.8rem 1.4rem;
+
+    border-radius:999px;
+
+}
+
+
+/* ==========================================================
+   Hero
+   ========================================================== */
+
+   .hero {
+
+    min-height: calc(100vh - 90px);
+
+    display: flex;
+    align-items: center;
+
+    background: linear-gradient(
+        180deg,
+        #fffdfb 0%,
+        #faf7f2 100%
+    );
+
+    padding: 4rem 0 6rem;
+
+}
+
+.hero-grid {
+
+    display: grid;
+
+    grid-template-columns: 60% 40%;
+
+    align-items: center;
+
+    gap: 4rem;
+
+}
+
+/* ---------------------- */
+/* Text */
+/* ---------------------- */
+
+.hero-label {
+
+    color: var(--pink);
+
+    text-transform: uppercase;
+
+    letter-spacing: .18rem;
+
+    font-size: .85rem;
+
+    margin-bottom: 1rem;
+
+}
+
+.hero-date {
+
+    font-size: 1rem;
+
+    color: var(--muted);
+
+    margin-bottom: 2rem;
+
+}
+
+.hero-title {
+
+    display: flex;
+
+    flex-direction: column;
+
+    line-height: .5;
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-weight: 500;
+
+}
+
+.hero-title .line {
+
+    font-size: clamp(4rem, 8vw, 6.5rem);
+
+}
+
+.hero-title .ampersand {
+
+    color: var(--pink);
+
+    font-size: 5rem;
+
+    margin-left: 12rem;
+
+    margin-top: .2rem;
+
+    margin-bottom: .2rem;
+
+}
+
+.hero-intro {
+
+    max-width: 34rem;
+
+    margin-top: 2.5rem;
+
+    margin-bottom: 2.5rem;
+
+    color: var(--muted);
+
+    font-size: 1.1rem;
+
+    line-height: 1.9;
+
+}
+
+/* ---------------------- */
+/* Bild */
+/* ---------------------- */
+
+.hero-image {
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+.hero-image img {
+
+    width:100%;
+
+    max-width:460px;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    object-position:center 18%;
+
+    border-radius:36px;
+
+    border:10px solid white;
+
+    box-shadow:0 35px 80px rgba(0,0,0,.12);
+
+}
+
+/* ---------------------- */
+/* Knapp */
+/* ---------------------- */
+
+.primary-button {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:1rem 2rem;
+
+    border-radius:999px;
+
+    background:#e8a6b8;
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:500;
+
+    letter-spacing:.03rem;
+
+    transition:var(--transition);
+
+    box-shadow:0 15px 35px rgba(233,168,186,.28);
+
+}
+
+.primary-button:hover{
+
+    transform:translateY(-3px);
+
+    background:#dfa0b1;
+
+}
+
+/* ==========================================================
+   Gemensamma sektioner
+   ========================================================== */
+
+   .section{
+
+    padding:8rem 0;
+
+}
+
+.section-label{
+
+    text-align:center;
+
+    text-transform:uppercase;
+
+    letter-spacing:.25rem;
+
+    color:var(--pink);
+
+    font-size:.85rem;
+
+    margin-bottom:1rem;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-family:"Cormorant Garamond",serif;
+
+
+
+    font-size: clamp(3rem, 6vw, 4.5rem);
+    
+    
+
+    font-weight:500;
+
+    margin-bottom:1.5rem;
+
+}
+
+.section-intro{
+
+    max-width:700px;
+
+    margin:0 auto 4rem;
+
+    text-align:center;
+
+    color:var(--muted);
+
+    line-height:1.9;
+
+}
+
+/* ==========================================================
+   Kort
+   ========================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:2rem;
+
+}
+
+
+
+    .card {
+
+        background: rgba(255,255,255,.72);
+    
+        backdrop-filter: blur(12px);
+    
+        border: 1px solid var(--border);
+    
+        border-radius: 30px;
+    
+        padding: 3.2rem;
+    
+        text-align: center;
+    
+        box-shadow: 0 18px 45px rgba(0,0,0,.06);
+    
+        transition: var(--transition);
+    
+    }
+
+
+
+    .card:hover {
+
+        transform: translateY(-8px);
+    
+    
+    }
+
+
+.card-icon{
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-bottom:1,5rem;
+
+}
+
+.card-icon svg{
+
+    width:42px;
+
+    height:42px;
+
+    stroke:var(--pink);
+
+    stroke-width:1.6;
+
+}
+
+.card h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    margin-bottom:1rem;
+
+}
+
+.card p{
+
+    margin:.4rem 0;
+
+    color:var(--muted);
+
+}
+
+/* ==========================================================
+   Mobil
+   ========================================================== */
+
+   @media (max-width:900px){
+
+    nav{
+
+        display:none;
+
+    }
+
+    .hero-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .hero{
+
+        padding-top:2rem;
+
+    }
+
+    .hero h1{
+
+        font-size:4rem;
+
+    }
+
+    .hero-image{
+
+        order:-1;
+
+    }
+
+}
