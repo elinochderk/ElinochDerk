@@ -66,7 +66,7 @@ body {
    Header
    ========================================================== */
 
-   .site-header {
+  /* .site-header {
 
     position: sticky;
     top: 0;
@@ -141,7 +141,110 @@ nav a:hover{
     border-radius:999px;
 
 }
+*/
 
+/* ==========================================================
+   Navigation
+   ========================================================== */
+
+   .site-header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:1px solid rgba(0,0,0,.05);
+
+}
+
+.nav-container{
+
+    height: 84px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+.logo{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    margin-right:auto;
+
+}
+
+.logo span{
+
+    color:var(--pink);
+
+}
+
+.main-nav{
+
+    display:flex;
+
+    gap:2.2rem;
+
+    margin-right:2rem;
+
+}
+
+.main-nav a{
+
+    color:var(--muted);
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.main-nav a:hover{
+
+    color:var(--text);
+
+}
+
+.nav-button{
+
+    padding:.85rem 1.6rem;
+
+    border-radius:999px;
+
+    background:var(--pink);
+
+    color:white;
+
+    text-decoration:none;
+
+    transition:.25s;
+
+}
+
+.nav-button:hover{
+
+    transform:translateY(-2px);
+
+}
 
 /* ==========================================================
    Hero
