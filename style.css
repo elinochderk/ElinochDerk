@@ -710,7 +710,7 @@ body {
    MOBIL
    ========================================================== */
 
-   @media (max-width: 900px) {
+@media (max-width: 900px) {
 
     /* ---------- Header ---------- */
 
@@ -766,14 +766,6 @@ body {
         text-align: center;
     }
 
-    .hero-image {
-        order: -1;
-    }
-
-    .hero-image img {
-        max-width: 280px;
-        margin: 0 auto;
-    }
 
     .hero-title {
         line-height: .7;
@@ -791,11 +783,19 @@ body {
     .hero-intro {
         max-width: 100%;
     }
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 280px;
+        margin: 0 auto;
+    }
 
     /* ---------- Bröllopet ---------- */
 
     #brollopet {
-        padding: 5rem 0;
+        padding: 10rem 0;
     }
 
     .cards {
