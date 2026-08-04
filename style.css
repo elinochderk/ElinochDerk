@@ -14,7 +14,7 @@
     --pink: #e9a8ba;
     --green: #afc8a4;
     --blue: #afcbe8;
-    --yellow: #f4d98b;
+    --yellow: #f2dfa7;
 
     --shadow: 0 20px 60px rgba(0, 0, 0, .08);
 
@@ -175,472 +175,743 @@ body {
 }
 
 /* ==========================================================
-   Hero
+   HERO
    ========================================================== */
 
-.hero {
-    position: relative;
-    height: 100vh;
-
-    background-image: url("images/hero.jpg");
-    background-size: cover;
-    background-position: center 28%;
-
-    display: flex;
-    align-items: center;
-
-    overflow: hidden;
+   .hero {
+    padding: 7rem 0 4rem;
 }
 
-.hero-overlay {
-    position: absolute;
-    inset: 0;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 45% 55%;
 
-    background: linear-gradient(90deg,
-            rgba(0, 0, 0, .55) 0%,
-            rgba(0, 0, 0, .20) 45%,
-            rgba(0, 0, 0, 0) 100%);
+    gap: 4rem;
+
+    align-items: center;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    color: white;
+    max-width: 520px;
 }
 
 .hero-date {
+    color: var(--muted);
+
     letter-spacing: .2rem;
-    margin-bottom: 3rem;
-    color: white;
+
+    margin-bottom: 2rem;
 }
 
 .hero-title {
-    font-family: "Cormorant Garamond", serif;
     display: flex;
     flex-direction: column;
-    line-height: 0.40;
+
+    line-height: .4;
+
+    font-family: "Cormorant Garamond", serif;
+
+    margin-bottom: 2rem;
 }
 
 .hero-title .line {
-    font-size: clamp(5rem, 10vw, 8rem);
+    font-size: clamp(4.5rem, 8vw, 8rem);
+    font-weight: 200;
 }
 
 .hero-title .ampersand {
-    color: #e6b0bc;
-    font-size: 6rem;
-    margin-left: 13rem;
+    color: var(--pink);
+
+    font-size: 5rem;
+
+    margin-left: 12rem;
 }
 
 .hero-intro {
-    max-width: 500px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
 
-    color: white;
+    line-height: 1.8;
 
-    line-height: 2;
+    color: var(--muted);
 }
 
-.hero-wave {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-
-    width: 100%;
-    height: 120px;
-
-    background: var(--background);
-
-    border-radius: 100% 100% 0 0;
+.hero-image {
+    display: flex;
+    justify-content: center;
 }
 
 .hero-image img {
-
     width: 100%;
+    max-width: 400px;
 
-    max-width: 460px;
+    border-radius: 32px;
 
-    aspect-ratio: 4/5;
+    box-shadow: 0 25px 50px rgba(0,0,0,.08);
 
-    object-fit: cover;
-
-    object-position: center 18%;
-
-    border-radius: 36px;
-
-    border: 10px solid white;
-
-    box-shadow: 0 35px 80px rgba(0, 0, 0, .12);
-
-}
-
-/* ---------------------- */
-/* Knapp */
-/* ---------------------- */
-
-.primary-button {
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    padding: 1rem 2rem;
-
-    border-radius: 999px;
-
-    background: #e8a6b8;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: 500;
-
-    letter-spacing: .03rem;
-
-    transition: var(--transition);
-
-    box-shadow: 0 15px 35px rgba(233, 168, 186, .28);
-
-}
-
-.primary-button:hover {
-
-    transform: translateY(-3px);
-
-    background: #dfa0b1;
-
+    display: block;
 }
 
 /* ==========================================================
-   Gemensamma sektioner
+   BRÖLLOPET
    ========================================================== */
 
-.section {
-
-    padding: 8rem 0;
-
-}
-
-#brollopet{
+   #brollopet {
     position: relative;
     overflow: hidden;
+    padding: 8rem 0;
 }
 
-.section-label {
-
-    text-align: center;
-
-    text-transform: uppercase;
-
-    letter-spacing: .25rem;
-
-    color: var(--pink);
-
-    font-size: 0.85rem;
-
-    margin-bottom: 1rem;
-
-}
+/* ==========================================================
+   Rubriker
+   ========================================================== */
 
 .section-title {
-
     text-align: center;
 
     font-family: "Cormorant Garamond", serif;
-
-
     font-size: clamp(3rem, 6vw, 4.5rem);
-
-
     font-weight: 500;
 
     margin-bottom: 1.5rem;
-
 }
 
-.section-intro {
-
-    max-width: 700px;
-
-    margin: 0 auto 4rem;
-
+.section-label {
     text-align: center;
 
-    color: var(--muted);
+    color: var(--pink);
 
-    line-height: 1.9;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
 
+    font-size: 1.25rem;
+
+    margin-bottom: 3rem;
 }
 
-
 /* ==========================================================
-   Kort
+   Kort-layout
    ========================================================== */
 
-   .cards {
+.cards {
     display: grid;
-    grid-template-columns: repeat(2, minmax(550px, 420px));
+
+    grid-template-columns: repeat(2, minmax(420px, 550px));
+
     justify-content: center;
+
     gap: 2rem;
 }
 
-
-
 .card {
-
-    background: white;
-    border-radius: 20px;
-
-    padding: 2.5rem;
-
     display: flex;
     align-items: center;
     gap: 3rem;
 
+    padding: 2.5rem;
+
+    background: white;
+
+    border-radius: 20px;
+
     text-align: left;
 
     box-shadow: 0 12px 40px rgba(0, 0, 0, .05);
-
-
 }
 
-
-
-/*.card:hover {
-
-    transform: translateY(-8px);
-
-
-} */
-
-
-.card-icon-green {
-    width: 130px;
-    height: 130px;
-
-    border-radius: 50%;
-
-    background: var(--green);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    flex-shrink: 0;
-}
-
-.card-icon-blue {
-    width: 130px;
-    height: 130px;
-
-    border-radius: 50%;
-
-    background: var(--blue);
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    flex-shrink: 0;
-}
-
-
-.card-icon-green svg {
-    width: 70px;
-    height: 70px;
-    stroke-width: .9px;
-    color: green;
-}
-
-.card-icon-blue svg {
-    width: 70px;
-    height: 70px;
-    stroke-width: .9px;
-    color: blue;
-}
-
-
-
-.card h3 {
-
+.card-content h3 {
     font-family: "Cormorant Garamond", serif;
 
     font-size: 2rem;
 
     margin-bottom: 1rem;
-
-    color: var(--green)
-
 }
 
-.card h4 {
-
-    font-family: "Cormorant Garamond", serif;
-
-    font-size: 2rem;
-
-    margin-bottom: 1rem;
-
-    color: var(--blue)
-
-}
-
-.card p {
-
+.card-content p {
     margin: .4rem 0;
 
     font-size: 1.1rem;
 
     color: var(--muted);
-
-}
-
-/* =================================
-   Blommor Vår Dag
-   ================================= */
-
-   .flower-left{
-    position: absolute;
-
-    left: -80px;
-    bottom: 0;
-
-    width: 280px;
-
-    z-index: 1;
-
-    pointer-events: none;
-}
-
-.flower-right{
-    position: absolute;
-
-    right: -80px;
-    top: 120px;
-
-    width: 280px;
-
-    z-index: 1;
-
-    pointer-events: none;
-}
-
-#brollopet .container{
-    position: relative;
-    z-index: 2;
 }
 
 /* ==========================================================
- INFORMATIONS IKONER
+   Ikoner
    ========================================================== */
 
-   .info-section {
-    padding: 4rem 0 8rem;
-    background-color: var(--white);
-}
-
-.info-icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap; 
-    gap: 8rem;
-    margin-top: 1rem;
-}
-
- .info-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-
-    text-decoration: none;
-    color: var(--text);
-
-    transition: all 0.3s ease;
-} 
-
-.info-item:hover {
-    transform: translateY(-8px);
-} 
-
-.info-circle {
-    width: 120px;
-    height: 120px;
+.card-icon-green,
+.card-icon-blue {
+    width: 130px;
+    height: 130px;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     border-radius: 50%;
-    background: white;
 
-   box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.06),
-        0 20px 40px rgba(0, 0, 0, 0.04); 
-
-    transition: all 0.3s ease;
+    flex-shrink: 0;
 }
 
-.info-item:hover .info-circle {
-    box-shadow:
-        0 15px 35px rgba(233, 168, 186, 0.15),
-        0 25px 50px rgba(0, 0, 0, 0.08);
-
-    transform: scale(1.05);
+.card-icon-green {
+    background: var(--green);
 }
 
-.info-circle svg {
-    width: 42px;
-    height: 42px;
-
-    stroke: var(--pink);
-    stroke-width: 1.7;
+.card-icon-blue {
+    background: var(--blue);
 }
 
-.info-item span {
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 0.03rem;
-    color: var(--muted);
+.card-icon-green svg,
+.card-icon-blue svg {
+    width: 70px;
+    height: 70px;
+
+    stroke-width: .9px;
+}
+
+.card-icon-green svg {
+    color: #79946f;
+}
+
+.card-icon-blue svg {
+    color: #5f8fbe;
 }
 
 /* ==========================================================
-   Mobil
+   Rubrikfärger
    ========================================================== */
 
-@media (max-width:900px) {
+.card-green h3 {
+    color: #79946f;
+}
 
-    nav {
+.card-blue h3 {
+    color: #9dbfe4;
+}
 
+/* ==========================================================
+   Blommor
+   ========================================================== */
+
+.flower-left,
+.flower-right {
+    position: absolute;
+
+    width: 280px;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.flower-left {
+    left: -80px;
+    bottom: 0;
+}
+
+.flower-right {
+    right: -80px;
+    top: 120px;
+}
+
+
+/* ==========================================================
+   PRAKTISK INFO
+   ========================================================== */
+
+   .info-section {
+    background: #dce8f4;
+    padding: 3rem 0 6rem;
+    scroll-margin-top: 85px;
+}
+
+/* ==========================================================
+   Sektionstitel
+   ========================================================== */
+
+.info-label {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    margin-bottom: 2rem;
+}
+
+.info-content {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ==========================================================
+   Layout
+   ========================================================== */
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8rem;
+    margin-bottom: 3rem;
+}
+
+.info-block {
+    margin-bottom: 1.5rem;
+}
+
+.info-block:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================================
+   Rubrik + ikon
+   ========================================================== */
+
+.info-title {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.info-title h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 2.8rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ==========================================================
+   Ikoner
+   ========================================================== */
+
+.info-icon-circle {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.info-icon-circle svg {
+    width: 32px;
+    height: 32px;
+    stroke-width: 1.8;
+}
+
+/* Rosa */
+
+.pink-icon {
+    background: rgba(233, 168, 186, .25);
+}
+
+.pink-icon svg {
+    stroke: #d886a0;
+}
+
+/* Grön */
+
+.green-icon {
+    background: rgba(175, 200, 164, .25);
+}
+
+.green-icon svg {
+    stroke: #79946f;
+}
+
+/* Blå */
+
+.blue-icon {
+    background: rgba(175, 203, 232, .25);
+}
+
+.blue-icon svg {
+    stroke: #5f8fbe;
+}
+
+/* ==========================================================
+   Brödtext
+   ========================================================== */
+
+.info-block p {
+    max-width: 40ch;
+
+    color: var(--muted);
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   BOENDE
+   ========================================================== */
+
+   #boende {
+    scroll-margin-top: 85px;
+}
+
+.boende-section {
+    padding: 3rem 0 5rem;
+}
+
+.boende-card {
+    max-width: 700px;
+
+    margin: 0 auto;
+
+    padding: 3.5rem;
+
+    background: var(--white);
+
+    border-radius: 32px;
+
+    text-align: center;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
+}
+
+.boende-icon {
+    width: 120px;
+    height: 120px;
+
+    margin: 0 auto 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(175, 200, 164, .25);
+}
+
+.boende-icon svg {
+    width: 50px;
+    height: 50px;
+
+    stroke: #79946f;
+    stroke-width: 1.5;
+}
+
+.boende-card h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3.5rem;
+    font-weight: 500;
+
+    margin-bottom: 1.5rem;
+}
+
+.boende-card p {
+    max-width: 500px;
+
+    margin: 0 auto 1rem;
+
+    color: var(--muted);
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+}
+
+.boende-button {
+    display: inline-block;
+
+    margin-top: 1.5rem;
+
+    padding: 1rem 2rem;
+
+    border-radius: 999px;
+
+    background: var(--pink);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+}
+
+.boende-button:hover {
+    background: #dfa0b1;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================
+   GÅVOR
+   ========================================================== */
+
+   .gift-section {
+    background: var(--yellow);
+
+    padding: 6rem 0;
+
+    scroll-margin-top: 85px;
+}
+
+.gift-block {
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+.gift-title {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    margin-bottom: 2rem;
+}
+
+.gift-title h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 3rem;
+    font-weight: 500;
+
+    margin: 0;
+}
+
+.gift-icon-circle {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.35);
+
+    flex-shrink: 0;
+}
+
+.gift-icon-circle svg {
+    width: 32px;
+    height: 32px;
+
+    stroke: #b18a18;
+    stroke-width: 1.8;
+}
+
+.gift-block p {
+    max-width: 55ch;
+
+    line-height: 1.9;
+
+    color: var(--text);
+}
+
+/* ==========================================================
+   MOBIL
+   ========================================================== */
+
+   @media (max-width: 900px) {
+
+    /* ---------- Header ---------- */
+
+    .site-header {
+        position: sticky;
+    }
+
+    .nav-container {
+        height: auto;
+        padding: 1rem 0;
+
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+
+    .main-nav {
+        width: 100%;
+
+        justify-content: center;
+
+        margin-right: 0;
+
+        gap: 1rem;
+
+        flex-wrap: wrap;
+    }
+
+    .main-nav a {
+        font-size: .75rem;
+    }
+
+    .nav-button {
         display: none;
+    }
 
+    /* ---------- Hero ---------- */
+
+    .hero {
+        padding: 3rem 0;
     }
 
     .hero-grid {
-
         grid-template-columns: 1fr;
-
+        gap: 3rem;
     }
 
-    .hero {
-
-        padding-top: 2rem;
-
-    }
-
-    .hero h1 {
-
-        font-size: 4rem;
-
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
     }
 
     .hero-image {
-
         order: -1;
-
     }
 
+    .hero-image img {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .hero-title {
+        line-height: .7;
+    }
+
+    .hero-title .line {
+        font-size: 4rem;
+    }
+
+    .hero-title .ampersand {
+        font-size: 3rem;
+        margin-left: 0;
+    }
+
+    .hero-intro {
+        max-width: 100%;
+    }
+
+    /* ---------- Bröllopet ---------- */
+
+    #brollopet {
+        padding: 5rem 0;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 2rem;
+
+        padding: 2rem;
+    }
+
+    .card-icon-green,
+    .card-icon-blue {
+        width: 100px;
+        height: 100px;
+    }
+
+    .card-icon-green svg,
+    .card-icon-blue svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* ---------- Info ---------- */
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .info-title {
+        gap: 1rem;
+    }
+
+    .info-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .info-icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .info-icon-circle svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* ---------- Boende ---------- */
+
+    .boende-card {
+        padding: 2rem;
+    }
+
+    .boende-card h2 {
+        font-size: 2.8rem;
+    }
+
+    .boende-icon {
+        width: 90px;
+        height: 90px;
+    }
+
+    .boende-icon svg {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* ---------- Gåvor ---------- */
+
+    .gift-title {
+        gap: 1rem;
+    }
+
+    .gift-title h2 {
+        font-size: 2.2rem;
+    }
+
+    .gift-icon-circle {
+        width: 60px;
+        height: 60px;
+    }
+
+    .gift-icon-circle svg {
+        width: 26px;
+        height: 26px;
+    }
+
+    /* ---------- Blommor ---------- */
+
+    .flower-left,
+    .flower-right {
+        width: 150px;
+        opacity: .7;
+    }
+
+    .flower-left {
+        left: -60px;
+    }
+
+    .flower-right {
+        right: -60px;
+    }
+
+    /* ---------- Gemensamma rubriker ---------- */
+
+    .section-title {
+        font-size: 3rem;
+    }
+
+    .section-label {
+        font-size: 1rem;
+    }
 }

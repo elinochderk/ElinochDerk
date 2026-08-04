@@ -34,11 +34,11 @@
 
             <nav class="main-nav">
 
+                <a href="#hem">Hem</a>
                 <a href="#brollopet">Bröllopet</a>
-                <a href="#schema">Schema</a>
+                <a href="#info">Info</a>
                 <a href="#boende">Boende</a>
-                <a href="#bilder">Bilder</a>
-                <a href="#faq">FAQ</a>
+                <a href="#gavor">Gåvor</a>
 
             </nav>
 
@@ -52,15 +52,15 @@
 
 
 
-    <!-- =========================================================
+ <!-- ==========================================================
      HERO
 ========================================================== -->
 
-    <section class="hero">
+<section id="hem" class="hero">
 
-        <div class="hero-overlay"></div>
+    <div class="container hero-grid">
 
-        <div class="container hero-content">
+        <div class="hero-content">
 
             <p class="hero-date">
                 22 MAJ 2027
@@ -74,17 +74,28 @@
 
             <p class="hero-intro">
                 Varmt välkomna till vår bröllopshemsida.
-                Här hittar ni all information inför vår stora dag.
+
+                Här hittar ni all information inför vår stora dag,
+                från vigseln till festen.
+
                 Vi ser fram emot att fira tillsammans med er.
             </p>
 
+        </div>
 
+        <div class="hero-image">
+            <img
+
+           src="images/hero.jpg" 
+           alt="El"
 
         </div>
 
-        <div class="hero-wave"></div>
+        
 
-    </section>
+    </div>
+
+</section>
 
     <!-- =========================================================
      BRÖLLOPET
@@ -108,7 +119,7 @@
             </h2>
 
             <p class="section-label">
-                DETALJER
+                VAR OCH NÄR
             </p>
 
            <!--- <p class="section-intro">
@@ -126,6 +137,8 @@
                     </div>
                 
                     <div class="card-content">
+
+
                         <h3>VIGSEL</h3>
                 
                         <p><strong>13.30</strong></p>
@@ -160,49 +173,86 @@
 
     </section>
 
-      <!-- =========================================================
-  INFORMATIONS IKONER
-========================================================== -->  
+    <!-- =========================================================
+    INFO
+========================================================== -->
 
-<section id="information" class="info-section">
+<section id="info" class="info-section">
 
     <div class="container">
 
-        <div class="info-icons">
+        <div class="story-card">
 
-            <div class="info-item">
-                <div class="info-circle">
-                    <i data-lucide="shirt"></i>
-                </div>
-                <span>Klädkod</span>
-            </div>
+            <div class="info-content">
 
-            <div class="info-item">
-                <div class="info-circle">
-                    <i data-lucide="calendar-days"></i>
-                </div>
-                <span>Schema</span>
-            </div>
+                <p class="info-label">
+                        PRAKTISK INFO
+                    </p>
+                
+                    <div class="info-grid">
+                
+                        <div class="info-block">
 
-            <div class="info-item">
-                <div class="info-circle">
-                    <i data-lucide="bed-double"></i>
-                </div>
-                <span>Boende</span>
-            </div>
+                            <div class="info-title">
+                        
+                                <div class="info-icon-circle pink-icon">
+                                    <i data-lucide="shirt"></i>
+                                </div>
+                        
+                                <h2>Klädkod</h2>
+                        
+                            </div>
+                        
+                            <p>
+                                Klädkod för dagen är mörk kostym.
+                                Vi ser gärna somriga färger och festliga
+                                inslag. Undvik gärna helvitt.
+                            </p>
+                        
+                        </div>
+                
+                        <div class="info-block">
 
-            <div class="info-item">
-                <div class="info-circle">
-                    <i data-lucide="gift"></i>
-                </div>
-                <span>Presenter</span>
-            </div>
+                            <div class="info-title">
+                        
+                                <div class="info-icon-circle green-icon">
+                                    <i data-lucide="baby"></i>
+                                </div>
+                        
+                                <h2>Barn</h2>
+                        
+                            </div>
+                        
+                            <p>
+                                Vi älskar era barn, men denna dag önskar vi
+                                fira tillsammans med våra vuxna gäster.
+                                Undantag gäller självklart för ammande barn.
+                            </p>
+                        
+                        </div>
+                
+                    </div>
+                
+                    <div class="info-block tal-block">
 
-            <div class="info-item">
-                <div class="info-circle">
-                    <i data-lucide="bus"></i>
-                </div>
-                <span>Transport</span>
+                        <div class="info-title">
+                    
+                            <div class="info-icon-circle blue-icon">
+                                <i data-lucide="mic-2"></i>
+                            </div>
+                    
+                            <h2>Tal</h2>
+                    
+                        </div>
+                    
+                        <p>
+                            Om du vill hålla tal eller göra ett annat inslag
+                            under middagen får du gärna kontakta vår toastmaster
+                            i god tid före bröllopet.
+                        </p>
+                    
+                    </div>
+            
             </div>
 
         </div>
@@ -210,6 +260,76 @@
     </div>
 
 </section>
+
+
+<!-- ==========================================================
+     BOENDE
+========================================================== -->
+
+<section id="boende" class="boende-section">
+
+    <div class="container">
+
+        <div class="boende-card">
+
+            <div class="boende-icon">
+                <i data-lucide="bed-double"></i>
+            </div>
+
+            <h2>Boende</h2>
+
+            <p>
+                För er som önskar övernatta rekommenderar vi
+                Scandic Landvetter.
+            </p>
+
+            <p>
+                Rabattkod: <strong>ELINDERK2027</strong>
+            </p>
+
+            <a                Besök hemsidan
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     GÅVOR
+========================================================== -->
+
+<section id="gavor" class="gift-section">
+
+    <div class="container">
+
+        <div class="gift-block">
+
+            <div class="gift-title">
+
+                <div class="gift-icon-circle">
+                    <i data-lucide="gift"></i>
+                </div>
+
+                <h2>Gåvor</h2>
+
+            </div>
+
+            <p>
+                Er närvaro på vår stora dag är den finaste
+                gåvan vi kan få.
+
+                För den som ändå önskar ge en gåva bidrar vi
+                gärna till vår framtida bröllopsresa.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
 
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
