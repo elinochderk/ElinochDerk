@@ -252,10 +252,10 @@ body {
 }
 
 /* ==========================================================
-   BRÖLLOPET
+   TID & PLATS
    ========================================================== */
 
-   #brollopet {
+   #tidplats {
     position: relative;
     overflow: hidden;
     padding: 8rem 0;
@@ -269,10 +269,26 @@ body {
     text-align: center;
 
     font-family: "Cormorant Garamond", serif;
-    font-size: clamp(3rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 6vw, 3rem);
     font-weight: 500;
+    
 
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+
+    display: block;
+
+    width: 150px;
+    height: 2px;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    margin: .5rem auto 0;
 }
 
 .section-label {
@@ -318,7 +334,7 @@ body {
     box-shadow: 0 12px 40px rgba(0, 0, 0, .05);
 }
 
-.card-content h3 {
+.card-content-green h3 {
     font-family: "Cormorant Garamond", serif;
 
     font-size: 2rem;
@@ -326,7 +342,23 @@ body {
     margin-bottom: 1rem;
 }
 
-.card-content p {
+.card-content-blue h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+.card-content-green p {
+    margin: .4rem 0;
+
+    font-size: 1.1rem;
+
+    color: var(--muted);
+}
+
+.card-content-blue p {
     margin: .4rem 0;
 
     font-size: 1.1rem;
@@ -380,11 +412,11 @@ body {
    Rubrikfärger
    ========================================================== */
 
-.card-green h3 {
+.card-content-green {
     color: #79946f;
 }
 
-.card-blue h3 {
+.card-content-blue h3 {
     color: #9dbfe4;
 }
 
@@ -430,11 +462,26 @@ body {
 
 .info-label {
     font-family: "Cormorant Garamond", serif;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: clamp(2.5rem, 6vw, 3rem);
+    font-weight: 500;
     letter-spacing: .15rem;
     margin-bottom: 2rem;
+
+    position: relative;
 }
+
+.info-label::after {
+    content: "";
+
+    display: block;
+
+    width: 200px;
+    height: 2px;
+
+    background: rgba(0, 0, 0, 0.15);
+
+    margin: .5rem auto 1;
+} 
 
 .info-content {
     max-width: 1100px;
@@ -448,7 +495,7 @@ body {
 .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8rem;
+    gap: 2rem;
     margin-bottom: 3rem;
 }
 
@@ -473,7 +520,7 @@ body {
 
 .info-title h2 {
     font-family: "Cormorant Garamond", serif;
-    font-size: 2.8rem;
+    font-size:2.5rem;
     font-weight: 500;
     margin: 0;
 }
@@ -529,6 +576,17 @@ body {
 .blue-icon svg {
     stroke: #5f8fbe;
 }
+
+/* Gul */
+
+.yellow-icon {
+    background: rgba(242, 223, 167, .35);
+}
+
+.yellow-icon svg {
+    stroke: #b18a18;
+}
+
 
 /* ==========================================================
    Brödtext
@@ -640,10 +698,10 @@ body {
 }
 
 /* ==========================================================
-   GÅVOR
+   Kontakt
    ========================================================== */
 
-   .gift-section {
+   .contact-section {
     background: var(--yellow);
 
     padding: 6rem 0;
@@ -651,13 +709,17 @@ body {
     scroll-margin-top: 85px;
 }
 
-.gift-block {
-    max-width: 700px;
-
-    margin: 0 auto;
+.contact-section .container {
+    max-width: 1100px;
 }
 
-.gift-title {
+.contact-block {
+    max-width: 600px;
+
+    margin-left: 0;
+}
+
+.contact-title {
     display: flex;
     align-items: center;
 
@@ -666,7 +728,7 @@ body {
     margin-bottom: 2rem;
 }
 
-.gift-title h2 {
+.contact-title h2 {
     font-family: "Cormorant Garamond", serif;
 
     font-size: 3rem;
@@ -675,7 +737,7 @@ body {
     margin: 0;
 }
 
-.gift-icon-circle {
+.contact-icon-circle {
     width: 70px;
     height: 70px;
 
@@ -690,7 +752,7 @@ body {
     flex-shrink: 0;
 }
 
-.gift-icon-circle svg {
+.contact-icon-circle svg {
     width: 32px;
     height: 32px;
 
@@ -698,7 +760,7 @@ body {
     stroke-width: 1.8;
 }
 
-.gift-block p {
+.contact-block p {
     max-width: 55ch;
 
     line-height: 1.9;
@@ -793,9 +855,9 @@ body {
     }
    
 
-    /* ---------- Bröllopet ---------- */
+    /* ---------- Tid & Plats ---------- */
 
-    #brollopet {
+    #tidplats {
         padding: 10rem 0;
     }
 
