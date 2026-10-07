@@ -345,7 +345,7 @@ body {
    #tidplats {
     position: relative;
     overflow: hidden;
-    padding: 8rem 0;
+    padding: 6rem 0;
 }
 
 /* ==========================================================
@@ -406,21 +406,33 @@ body {
     }
 
 
-.card {
-    display: flex;
-    align-items: center;
-    gap: 3rem;
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+    
+        gap: 1rem;
+    
+        padding: 2rem;
+    
+        background: white;
+    
+        border-radius: 20px;
+    
+        text-align: center;
+    
+        box-shadow: 0 12px 40px rgba(0, 0, 0, .05);
+    }
 
-    padding: 2.5rem;
-
-    background: white;
-
-    border-radius: 20px;
-
-    text-align: left;
-
-    box-shadow: 0 12px 40px rgba(0, 0, 0, .05);
-}
+    .card a {
+        color: inherit;
+        text-decoration: none;
+    }
+    
+    .card a:hover {
+        text-decoration: underline;
+    }
 
 .card-content-green h3 {
     font-family: "Cormorant Garamond", serif;
@@ -431,6 +443,14 @@ body {
 }
 
 .card-content-blue h3 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+.card-content-yellow h3 {
     font-family: "Cormorant Garamond", serif;
 
     font-size: 2rem;
@@ -454,14 +474,23 @@ body {
     color: var(--muted);
 }
 
+.card-content-yellow p {
+    margin: .4rem 0;
+
+    font-size: 1.1rem;
+
+    color: var(--muted);
+}
+
 /* ==========================================================
    Ikoner
    ========================================================== */
 
 .card-icon-green,
-.card-icon-blue {
-    width: 130px;
-    height: 130px;
+.card-icon-blue,
+.card-icon-yellow {
+    width: 100px;
+    height: 100px;
 
     display: flex;
     justify-content: center;
@@ -480,10 +509,15 @@ body {
     background: var(--blue);
 }
 
+.card-icon-yellow {
+    background: var(--yellow);
+}
+
 .card-icon-green svg,
-.card-icon-blue svg {
-    width: 70px;
-    height: 70px;
+.card-icon-blue svg,
+.card-icon-yellow svg {
+    width: 50px;
+    height: 50px;
 
     stroke-width: .9px;
 }
@@ -496,6 +530,10 @@ body {
     color: #5f8fbe;
 }
 
+.card-icon-yellow svg {
+    color: #b18a18;
+}
+
 /* ==========================================================
    Rubrikfärger
    ========================================================== */
@@ -506,6 +544,10 @@ body {
 
 .card-content-blue h3 {
     color: #9dbfe4;
+}
+
+.card-content-yellow h3 {
+    color: #b18a18;
 }
 
 /* ==========================================================
@@ -525,12 +567,12 @@ body {
 
 .flower-left {
     left: -80px;
-    bottom: 0;
+    bottom: 300px;
 }
 
 .flower-right {
     right: -80px;
-    top: 120px;
+    top: 250px;
 }
 
 
@@ -1027,7 +1069,7 @@ body {
     }
 
     .cards {
-        grid-template-columns: 1fr;
+        grid-template-columns:  1fr;
     }
 
     .card {
@@ -1047,13 +1089,16 @@ body {
     }
 
     .card-icon-green svg,
-    .card-icon-blue svg {
+    .card-icon-blue svg,
+    .card-icon-yellow svg {
         width: 45px;
         height: 45px;
     }
 
+
     .card-content-green h3,
-    .card-content-blue h3 {
+    .card-content-blue h3,
+    .card-content-yellow h3{
         font-size: 1.8rem;
     }
 
