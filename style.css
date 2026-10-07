@@ -189,6 +189,11 @@ body {
 
    .hero {
     padding: 7rem 0 4rem;
+
+        position: relative;
+
+        
+    
 }
 
 .hero-grid {
@@ -201,48 +206,95 @@ body {
 }
 
 .hero-content {
-    max-width: 520px;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-.hero-date {
-    color: var(--muted);
+/* Vi gifter oss */
 
-    letter-spacing: .2rem;
-
-    margin-bottom: 2rem;
-}
-
-.hero-title {
-    display: flex;
-    flex-direction: column;
-
-    line-height: .4;
-
+.hero-top-text {
     font-family: "Cormorant Garamond", serif;
 
-    margin-bottom: 2rem;
-}
-
-.hero-title .line {
-    font-size: clamp(4.5rem, 8vw, 8rem);
-    font-weight: 200;
-}
-
-.hero-title .ampersand {
-    color: var(--pink);
-
-    font-size: 5rem;
-
-    margin-left: 12rem;
-}
-
-.hero-intro {
-    font-size: 1rem;
-
-    line-height: 1.8;
+    font-size: 2rem;
+    font-style: italic;
 
     color: var(--muted);
+
+    margin-bottom: 1.5rem;
 }
+
+/* Namn */
+
+.hero-title {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(4.5rem, 8vw, 7rem);
+
+    font-weight: 300;
+
+    line-height: 1;
+
+    margin-bottom: 1.5rem;
+}
+
+.hero-title span {
+    color: var(--pink);
+}
+
+/* Hjärta + linjer */
+
+.hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 1rem;
+
+    color: var(--pink);
+
+    font-size: 1.2rem;
+
+    margin-bottom: 1.5rem;
+}
+
+.hero-divider span {
+    width: 140px;
+    height: 1px;
+
+    background: rgba(0, 0, 0, .15);
+}
+
+/* Datum */
+
+.hero-date {
+    
+
+    text-align: center;
+
+    color: var(--text);
+
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+
+    font-size: 1.25rem;
+
+    margin-bottom: 3rem;
+}
+
+/* Intro */
+
+.hero-intro {
+    max-width: 500px;
+
+    margin: 0 auto;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+
 
 .hero-image {
     display: flex;
@@ -251,14 +303,40 @@ body {
 
 .hero-image img {
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
+   
+    border-radius: 0px;
+    border: 12px solid var(--background);
+    transform: rotate(-2deg);
 
-    border-radius: 32px;
+   /* box-shadow: 0 25px 50px rgba(0,0,0,.08);*/
 
-    box-shadow: 0 25px 50px rgba(0,0,0,.08);
+    box-shadow:
+    0 15px 30px rgba(0,0,0,.08),
+    0 30px 60px rgba(0,0,0,.12);
 
     display: block;
+    
 }
+    
+/* =================================
+   Blomma hero
+   ================================= */
+
+   .hero-flower {
+    position: absolute;
+
+    left: -20px;
+    bottom: -20px;
+
+    width: 260px;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+    
+
 
 /* ==========================================================
    TID & PLATS
@@ -320,12 +398,13 @@ body {
 .cards {
     display: grid;
 
-    grid-template-columns: repeat(2, minmax(420px, 550px));
-
     justify-content: center;
 
-    gap: 2rem;
-}
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    
+        gap: 2rem;
+    }
+
 
 .card {
     display: flex;
@@ -463,6 +542,8 @@ body {
   /*  background: #dce8f4;*/
     padding: 2rem 0 4rem;
     scroll-margin-top: 85px;
+    position: relative;
+    
 }
 
 /* ==========================================================
@@ -476,7 +557,7 @@ body {
     letter-spacing: .15rem;
     margin-bottom: 2rem;
 
-    position: relative;
+   
 }
 
 .info-label::after {
@@ -501,11 +582,12 @@ body {
    Layout
    ========================================================== */
 
-.info-grid {
+   .info-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 3rem;
+
+    column-gap: 14rem;
+    row-gap: 2rem;
 }
 
 .info-block {
@@ -602,13 +684,15 @@ body {
    ========================================================== */
 
 .info-block p {
-    max-width: 40ch;
+    max-width: 100ch;
 
     color: var(--muted);
 
     line-height: 1.6;
     font-size: 1rem;
 }
+
+
 
 
 /* ==========================================================
@@ -621,6 +705,7 @@ body {
 
 .boende-section {
     padding: 3rem 0 5rem;
+    position: relative;
 }
 
 .boende-card {
@@ -670,7 +755,7 @@ body {
     letter-spacing: .15rem;
     margin-bottom: 2rem;
 
-    position: relative;
+    
 }
 
 
@@ -722,6 +807,30 @@ body {
     background: #dfa0b1;
     transform: translateY(-2px);
 }
+/* ==========================================================
+   Blommor
+   ========================================================== */
+
+   .rings,
+   .champange {
+       position: absolute;
+   
+       width: 280px;
+   
+       pointer-events: none;
+   
+       z-index: 1;
+   }
+   
+   .rings{
+       left: -50px;
+       bottom: 100px;
+   }
+   
+   .champange {
+       right: -80px;
+       top: 120px;
+   }
 
 /* ==========================================================
    Kontakt
@@ -807,55 +916,56 @@ body {
 
     color: var(--text);
 }
-
 /* ==========================================================
    MOBIL
    ========================================================== */
 
 @media (max-width: 900px) {
 
-    /* ---------- Header ---------- */
+    /* =================================
+       Header
+       ================================= */
 
     .site-header {
         position: sticky;
     }
 
     .nav-container {
+        flex-direction: column;
         height: auto;
         padding: 1rem 0;
-
-        flex-wrap: wrap;
         gap: 1rem;
     }
 
     .logo {
+        margin-right: 0;
         font-size: 1.8rem;
     }
 
     .main-nav {
-        width: 100%;
+        margin-right: 0;
+
+        flex-wrap: wrap;
 
         justify-content: center;
 
-        margin-right: 0;
-
-        gap: 1rem;
-
-        flex-wrap: wrap;
+        gap: 0.75rem 1.25rem;
     }
 
     .main-nav a {
-        font-size: .75rem;
+        font-size: 0.75rem;
     }
 
     .nav-button {
         display: none;
     }
 
-    /* ---------- Hero ---------- */
+    /* =================================
+       Hero
+       ================================= */
 
     .hero {
-        padding: 3rem 0;
+        padding: 10rem 0 4rem;
     }
 
     .hero-grid {
@@ -865,7 +975,19 @@ body {
 
     .hero-content {
         max-width: 100%;
-        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-divider span {
+        width: 70px;
+    }
+
+    .hero-date {
+        font-size: 1rem;
+        letter-spacing: .15rem;
     }
 
     .hero-image {
@@ -874,31 +996,34 @@ body {
 
     .hero-image img {
         max-width: 280px;
-        margin: 0 auto;
+
+        transform: rotate(-1deg);
     }
 
-    .hero-title {
-        line-height: .7;
+    /* =================================
+       Gemensamma rubriker
+       ================================= */
+
+    .section-title {
+        font-size: 2.2rem;
     }
 
-    .hero-title .line {
-        font-size: 4rem;
+    .section-label {
+        font-size: 0.95rem;
+
+        letter-spacing: .15rem;
     }
 
-    .hero-title .ampersand {
-        font-size: 3rem;
-        margin-left: 0;
+    .section-title::after {
+        width: 100px;
     }
 
-    .hero-intro {
-        max-width: 100%;
-    }
-   
-
-    /* ---------- Tid & Plats ---------- */
+    /* =================================
+       Tid & Plats
+       ================================= */
 
     #tidplats {
-        padding: 10rem 0;
+        padding: 5rem 0;
     }
 
     .cards {
@@ -910,33 +1035,47 @@ body {
 
         text-align: center;
 
-        gap: 2rem;
+        gap: 1.5rem;
 
         padding: 2rem;
     }
 
     .card-icon-green,
     .card-icon-blue {
-        width: 100px;
-        height: 100px;
+        width: 90px;
+        height: 90px;
     }
 
     .card-icon-green svg,
     .card-icon-blue svg {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
     }
 
-    .flower-left,
-.flower-right {
-    display: none;
-}
+    .card-content-green h3,
+    .card-content-blue h3 {
+        font-size: 1.8rem;
+    }
 
-    /* ---------- Info ---------- */
+    .card-content-green p,
+    .card-content-blue p {
+        font-size: 1rem;
+    }
+
+    /* =================================
+       Praktisk info
+       ================================= */
+
+    .info-section {
+        padding: 4rem 0;
+    }
 
     .info-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+
+        column-gap: 0;
+
+        row-gap: 2rem;
     }
 
     .info-title {
@@ -944,7 +1083,7 @@ body {
     }
 
     .info-title h2 {
-        font-size: 2.2rem;
+        font-size: 2rem;
     }
 
     .info-icon-circle {
@@ -953,18 +1092,25 @@ body {
     }
 
     .info-icon-circle svg {
-        width: 26px;
-        height: 26px;
+        width: 28px;
+        height: 28px;
     }
 
-    /* ---------- Boende ---------- */
+    .info-block p {
+        max-width: 100%;
+        font-size: 0.95rem;
+    }
+
+    /* =================================
+       Boende
+       ================================= */
 
     .boende-card {
         padding: 2rem;
     }
 
     .boende-card h2 {
-        font-size: 2.8rem;
+        font-size: 2.2rem;
     }
 
     .boende-icon {
@@ -977,49 +1123,41 @@ body {
         height: 40px;
     }
 
-    /* ---------- Gåvor ---------- */
-
-    .gift-title {
-        gap: 1rem;
+    .boende-card p {
+        font-size: 1rem;
     }
 
-    .gift-title h2 {
+    /* =================================
+       Kontakt
+       ================================= */
+
+    .contact-title h2 {
         font-size: 2.2rem;
     }
 
-    .gift-icon-circle {
+    .contact-icon-circle {
         width: 60px;
         height: 60px;
     }
 
-    .gift-icon-circle svg {
-        width: 26px;
-        height: 26px;
+    .contact-icon-circle svg {
+        width: 28px;
+        height: 28px;
     }
 
-    /* ---------- Blommor ---------- */
+    .contact-block p {
+        font-size: 0.95rem;
+    }
+
+    /* =================================
+       Dekorationer
+       ================================= */
 
     .flower-left,
-    .flower-right {
-        width: 150px;
-        opacity: .7;
-    }
-
-    .flower-left {
-        left: -60px;
-    }
-
-    .flower-right {
-        right: -60px;
-    }
-
-    /* ---------- Gemensamma rubriker ---------- */
-
-    .section-title {
-        font-size: 3rem;
-    }
-
-    .section-label {
-        font-size: 1rem;
+    .flower-right,
+    .rings,
+    .champange,
+    .hero-flower {
+        display: none;
     }
 }
