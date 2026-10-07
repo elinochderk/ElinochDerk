@@ -766,6 +766,8 @@ body {
     box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
 }
 
+
+
 .boende-icon {
     width: 120px;
     height: 120px;
@@ -1010,7 +1012,7 @@ body {
     }
 
     .hero {
-        padding: 10rem 0 4rem;
+        padding: 4rem 0 4rem;
     }
 
     .hero-grid {
@@ -1066,7 +1068,9 @@ body {
     /* =================================
        Tid & Plats
        ================================= */
-
+       .info-section {
+        padding: 4rem 0;
+    }
     #tidplats {
         padding: 4rem 0;
         scroll-margin-top: 160px;
