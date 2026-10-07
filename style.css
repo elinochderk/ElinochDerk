@@ -931,15 +931,16 @@ body {
     }
 
     .nav-container {
-        flex-direction: column;
-        height: auto;
-        padding: 1rem 0;
-        gap: 1rem;
+       
+            justify-content: center;
+            height: auto;
+            padding: 0.75rem 0;
+            gap: 1rem;
+        }
     }
 
     .logo {
-        margin-right: 0;
-        font-size: 1.8rem;
+        display:none;
     }
 
     .main-nav {
@@ -1024,6 +1025,7 @@ body {
 
     #tidplats {
         padding: 5rem 0;
+        scroll-margin-top: 160px;
     }
 
     .cards {
@@ -1068,6 +1070,7 @@ body {
 
     .info-section {
         padding: 4rem 0;
+        scroll-margin-top: 160px;
     }
 
     .info-grid {
@@ -1160,4 +1163,3 @@ body {
     .hero-flower {
         display: none;
     }
-}
