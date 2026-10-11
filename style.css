@@ -972,7 +972,10 @@ body {
 /* ==========================================================
    MOBIL
    ========================================================== */
-
+/* OSA-knappen visas inte på dator */
+.hero-osa-mobile {
+    display: none;
+}
 @media (max-width: 900px) {
 
     /* =================================
@@ -1045,7 +1048,24 @@ body {
     background: var(--pink);
     color: #fff;
 }
+/* OSA-knapp under hero-bilden endast på mobil */
+.hero-osa-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem auto 2rem;
+    padding: 0 1rem;
+}
 
+.hero-osa-mobile a {
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    border-radius: 50px;
+    background: var(--pink);
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 0.08rem;
+}
 
 
     /* =================================
