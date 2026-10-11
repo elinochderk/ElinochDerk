@@ -612,7 +612,7 @@ body {
 
     background: rgba(0, 0, 0, 0.15);
 
-    margin: .5rem auto 1;
+    margin: 0.5rem auto 1;
 } 
 
 .info-content {
@@ -1126,7 +1126,8 @@ body {
         content: "";
         width: 100px;
         height: 2px;
-        background-color: var(--pink);
+        background-color: rgba(0, 0, 0, 0.15);
+
         margin: 0.5rem auto 0;
         position: static;
     }
