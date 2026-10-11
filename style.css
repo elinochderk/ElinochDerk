@@ -1115,6 +1115,12 @@ body {
     .section-title {
         font-size: 2.2rem;
     }
+    .info-label {
+        font-size: 2.2rem;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
 
     .section-label {
         font-size: 0.95rem;
@@ -1183,7 +1189,13 @@ body {
     .info-section {
         padding: 4rem 0;
     }
-
+    .story-card {
+        margin-top: 0;
+    }
+    
+    .info-content {
+        padding-top: 0;
+    }
     .info-grid {
         grid-template-columns: 1fr;
 
