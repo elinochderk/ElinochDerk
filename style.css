@@ -1011,7 +1011,7 @@ body {
 .logo {
     display: none;
 }
-
+/*
 .main-nav {
     display: flex;
     flex-wrap: wrap;
@@ -1035,10 +1035,46 @@ body {
     line-height: 1.2;
 }
 
-/* Tunna streck mellan navigationsflikarna */
+ Tunna streck mellan navigationsflikarna 
+.main-nav a + a {
+    border-left: 1px solid #d8d1cf;
+} */
+
+
+/* Navigation – mobil */
+.main-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 1.1rem 0.2rem;
+
+    column-gap: 0;
+    row-gap: 0;
+    background: #fff;
+}
+
+.main-nav a {
+    flex: 0 1 auto;
+    min-width: 0;
+    padding: 0 0.35rem;
+
+    font-size: clamp(0.58rem, 2.5vw, 0.78rem);
+    letter-spacing: 0;
+    line-height: 1.2;
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Tunna streck mellan länkarna */
 .main-nav a + a {
     border-left: 1px solid #d8d1cf;
 }
+
 
 .nav-button {
     display: none;
