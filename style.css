@@ -1036,24 +1036,16 @@ body {
 }
 
 .nav-button {
-    display: inline-block;
-    width: auto;
-    height: auto;
-    min-height: 0;
-    padding: 0.7rem 2rem;
-    font-size: 0.85rem;
-    text-align: center;
-    flex-shrink: 0;
-    border-radius: 50px;
-    background: var(--pink);
-    color: #fff;
+    display: none;
 }
 /* OSA-knapp under hero-bilden endast på mobil */
 .hero-osa-mobile {
     display: flex;
     justify-content: center;
-    margin: 1.5rem auto 2rem;
-    padding: 0 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 1rem 1rem;
 }
 
 .hero-osa-mobile a {
