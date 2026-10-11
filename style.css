@@ -976,8 +976,17 @@ body {
 .hero-osa-mobile {
     display: none;
 }
+/* Radbrytning visas bara på mobil */
+.mobile-break {
+    display: none;
+}
 @media (max-width: 900px) {
 
+
+        .mobile-break {
+            display: block;
+        }
+    
     /* =================================
        Header
        ================================= */
@@ -1062,7 +1071,7 @@ body {
     flex: 1 1 0;
     min-width: 0;
     padding: 0 0.15rem;
-    font-size: clamp(0.58rem, 2.5vw, 0.78rem);
+    font-size: clamp(0.65rem, 2.8vw, 0.9rem);
     letter-spacing: 0;
     line-height: 1.2;
     white-space: nowrap;
