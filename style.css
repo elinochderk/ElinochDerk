@@ -1021,7 +1021,7 @@ body {
     max-width: 100%;
     box-sizing: border-box;
     margin: 0;
-    padding: 1rem 0.4rem;
+    padding: 1,5rem 0.4rem;
     background: #fff;
     column-gap: 0;
     row-gap: 0.65rem;
@@ -1073,7 +1073,7 @@ body {
     }
 
     .hero {
-        padding: 4rem 0 4rem;
+        padding: 6rem 0 4rem;
     }
 
     .hero-grid {
