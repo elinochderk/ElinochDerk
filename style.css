@@ -898,6 +898,15 @@ body {
     margin-left: 0;
 }
 
+.contact-block a {
+    color: inherit;
+    text-decoration: none;
+}
+.contact-block a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .contact-title {
     display: flex;
     align-items: center;
@@ -981,11 +990,11 @@ body {
         gap: 1rem;
     }
 
-    .logo {
-        margin-right: 0;
-        font-size: 1.8rem;
-    }
-
+   
+.logo {
+    display: none;
+}
+```
     .main-nav {
         margin-right: 0;
 
