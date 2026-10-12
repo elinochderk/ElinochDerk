@@ -767,6 +767,16 @@ body {
 }
 
 
+/* Länk i boendesektionen */
+.boende-card a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.boende-card a:hover {
+    text-decoration: underline;
+}
+
 
 .boende-icon {
     width: 120px;
@@ -1079,7 +1089,18 @@ body {
 }
 
 .main-nav a + a {
-    border-left: 1px solid #d8d1cf;
+    position: relative;
+    border-left: none;
+}
+.main-nav a + a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 2.2rem;
+    background: #d8d1cf;
 }
 
 
