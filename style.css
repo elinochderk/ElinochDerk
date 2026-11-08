@@ -11,7 +11,8 @@
     --text: #3f3f3f;
     --muted: #6b6b6b;
 
-    --pink: #e9a8ba;
+ /*   --pink: #e9a8ba; */
+    --pink:  rgba(233, 168, 186, .25);
    /* --green: #afc8a4;*/
     --green: rgba(175, 200, 164, .25);
    /* --blue: #afcbe8;*/
@@ -281,7 +282,7 @@ body {
    .hero-flower {
     position: absolute;
     top: 4rem;
-    left: 2rem;
+    left: 0.5rem;
     width: 180px;
     height: auto;
     object-fit: contain;
@@ -386,7 +387,7 @@ body {
         text-decoration: underline;
     }
 
-.card-content-green h3 {
+.card-content-pink h3 {
     font-family: "Cormorant Garamond", serif;
 
     font-size: 2rem;
@@ -410,7 +411,7 @@ body {
     margin-bottom: 1rem;
 }
 
-.card-content-green p {
+.card-content-pink p {
     margin: .4rem 0;
 
     font-size: 1.1rem;
@@ -438,7 +439,7 @@ body {
    Ikoner
    ========================================================== */
 
-.card-icon-green,
+.card-icon-pink,
 .card-icon-blue,
 .card-icon-yellow {
     width: 100px;
@@ -453,8 +454,8 @@ body {
     flex-shrink: 0;
 }
 
-.card-icon-green {
-    background: var(--green);
+.card-icon-pink {
+    background:  var(--pink);
 }
 
 .card-icon-blue {
@@ -465,7 +466,7 @@ body {
     background: var(--yellow);
 }
 
-.card-icon-green svg,
+.card-icon-pink svg,
 .card-icon-blue svg,
 .card-icon-yellow svg {
     width: 50px;
@@ -474,8 +475,8 @@ body {
     stroke-width: .9px;
 }
 
-.card-icon-green svg {
-    color: #79946f;
+.card-icon-pink svg {
+    color: #d886a0;
 }
 
 .card-icon-blue svg {
@@ -490,8 +491,8 @@ body {
    Rubrikfärger
    ========================================================== */
 
-.card-content-green {
-    color: #79946f;
+.card-content-pink {
+    color: #d886a0;
 }
 
 .card-content-blue h3 {
@@ -1312,7 +1313,7 @@ body {
     .flower-left,
     .flower-right,
     .rings,
-    .champange,
+    .flowers-right-1,
     .hero-flower {
         display: none;
     }
