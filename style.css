@@ -1188,13 +1188,13 @@ body {
         padding: 2rem;
     }
 
-    .card-icon-green,
+    .card-icon-pink,
     .card-icon-blue {
         width: 90px;
         height: 90px;
     }
 
-    .card-icon-green svg,
+    .card-icon-pink svg,
     .card-icon-blue svg,
     .card-icon-yellow svg {
         width: 45px;
@@ -1202,15 +1202,16 @@ body {
     }
 
 
-    .card-content-green h3,
+    .card-content-pink h3,
     .card-content-blue h3,
     .card-content-yellow h3{
         font-size: 1.8rem;
     }
 
-    .card-content-green p,
-    .card-content-blue p {
-        font-size: 1.8rem;
+    .card-content-pink p,
+    .card-content-blue p,
+    .card-content-yellow p {
+        font-size: 1rem;
     }
 
     /* =================================
